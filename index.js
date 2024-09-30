@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
+const Product = require('./models/product');
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/shopApp_V2')
+  .connect('mongodb://127.0.0.1:27017/farmStand_V2')
   .then(() => {
     console.log('Mongo Connection Open...');
   })
