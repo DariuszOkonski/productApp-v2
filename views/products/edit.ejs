@@ -28,9 +28,9 @@
       <br />
       <label for="category">Select Category</label>
       <select id="category" name="category">
-        <option value="fruit">fruit</option>
-        <option value="vegetable">vegetable</option>
-        <option value="dairy">dairy</option>
+        <% for(let category of categories) { %>
+          <option value="<%= category %>" <%= product.category === category ? 'selected' : '' %>><%= category %></option>
+        <% } %>
       </select>
 
       <br />
